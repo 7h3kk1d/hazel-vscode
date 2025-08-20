@@ -1,0 +1,95 @@
+{
+  "scopeName": "source.hazel",
+  "name": "Hazel",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#literals" },
+    { "include": "#operators" },
+    { "include": "#identifiers" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "#",
+          "end": "#",
+          "name": "comment.line.number-sign.hazel"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(let|in|end|fun|case|if|then|else|pause|debug|hide|eval|test|fix|typfun|type|forall|rec)\\b",
+          "name": "keyword.control.hazel"
+        },
+        {
+          "match": "\\b(undef|true|false)\\b",
+          "name": "constant.language.hazel"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "match": "\\b(Int|Float|Bool|String)\\b",
+          "name": "storage.type.hazel"
+        }
+      ]
+    },
+    "literals": {
+      "patterns": [
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric.integer.hazel"
+        },
+        {
+          "match": "\\b[0-9]+\\.[0-9]+\\b",
+          "name": "constant.numeric.float.hazel"
+        },
+        {
+          "match": "\"(?:[^\"\\\\]|\\\\.)*\"",
+          "name": "string.quoted.double.hazel"
+        },
+        {
+          "match": "`(?:[^`\\\\]|\\\\.)*`",
+          "name": "string.quoted.other.hazel"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "(==|!=|\\+|-|\\*|/|\\*\\*|<|<=|>|>=|\\+\\.|-\\.|\\*\\.|/\\.|\\*\\*\\.|<\\.|<=\\.|>\\.|>=\\.|==\\.|!=\\.|\\+\\+|\\$==|&&|\\|\\||!|\\||,|:|;|::|@<|@|\\?|_|\\$|~|/~|\\?t|\\?p|\\?tp|\\?e)",
+          "name": "keyword.operator.hazel"
+        },
+        {
+          "match": "(\\(\\)|\\(|\\)|\\[|\\])",
+          "name": "punctuation.section.hazel"
+        },
+        {
+          "match": "(->|=>)",
+          "name": "storage.modifier.arrow.hazel"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[A-Z][a-zA-Z0-9_]*\\b",
+          "name": "entity.name.type.hazel"
+        },
+        {
+          "match": "\\b[a-z_][a-zA-Z0-9_]*\\b",
+          "name": "variable.other.hazel"
+        },
+        {
+          "match": "\\^\\^[a-zA-Z0-9_]+",
+          "name": "variable.function.projector.hazel"
+        }
+      ]
+    }
+  }
+}

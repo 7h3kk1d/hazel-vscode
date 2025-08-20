@@ -1,0 +1,24 @@
+{
+  "scopeName": "hazel.ocaml.injection",
+  "injectionSelector": "L:source.reason",
+  "patterns": [
+    {
+      "name": "meta.embedded.hazel.ocaml",
+      "begin": "(\\{)(hazel)(\\|)",
+      "beginCaptures": {
+        "1": { "name": "string.double string.regexp keyword.control.flow message.error" },
+        "2": { "name": "constant.numeric" },
+        "3": { "name": "string.double string.regexp keyword.control.flow message.error" }
+      },
+      "end": "(\\|)(hazel)(\\})",
+      "endCaptures": {
+        "1": { "name": "string.double string.regexp keyword.control.flow message.error" },
+        "2": { "name": "constant.numeric" },
+        "3": { "name": "string.double string.regexp keyword.control.flow message.error" }
+      },
+      "patterns": [
+        { "include": "source.hazel" }
+      ]
+    }
+  ]
+}

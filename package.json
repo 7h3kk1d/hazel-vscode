@@ -1,0 +1,40 @@
+{
+    "name": "hazel-in-ocaml",
+    "displayName": "Hazel in OCaml",
+    "description": "Inject Hazel syntax highlighting into OCaml/Reason files inside {hazel|...|hazel} blocks.",
+    "version": "0.0.1",
+    "publisher": "yourname",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "contributes": {
+        "grammars": [
+            {
+                "scopeName": "hazel.ocaml.injection",
+                "path": "./syntaxes/hazel-injection.tmLanguage.json",
+                "injectTo": [
+                    "source.reason"
+                ]
+            },
+            {
+                "language": "hazel",
+                "scopeName": "source.hazel",
+                "path": "./syntaxes/hazel.tmLanguage.json"
+            }
+        ],
+        "languages": [
+            {
+                "id": "hazel",
+                "aliases": ["Hazel"],
+                "extensions": [".hz"],
+                "configuration": "./language-configuration.json"
+              }
+        ]
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
