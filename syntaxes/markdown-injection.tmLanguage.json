@@ -1,0 +1,24 @@
+{
+  "scopeName": "markdown.ocaml.injection",
+  "injectionSelector": "L:source.reason",
+  "patterns": [
+    {
+      "name": "meta.embedded.markdown.ocaml",
+      "begin": "(\\{)(md)(\\|)",
+      "beginCaptures": {
+        "1": { "name": "string.double string.regexp keyword.control.flow message.error" },
+        "2": { "name": "constant.numeric" },
+        "3": { "name": "string.double string.regexp keyword.control.flow message.error" }
+      },
+      "end": "(\\|)(md)(\\})",
+      "endCaptures": {
+        "1": { "name": "string.double string.regexp keyword.control.flow message.error" },
+        "2": { "name": "constant.numeric" },
+        "3": { "name": "string.double string.regexp keyword.control.flow message.error" }
+      },
+      "patterns": [
+        { "include": "source.md" }
+      ]
+    }
+  ]
+}
