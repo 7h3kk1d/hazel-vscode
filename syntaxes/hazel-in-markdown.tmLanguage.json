@@ -1,0 +1,15 @@
+{
+  "scopeName": "source.hazel.markdown",
+  "injectionSelector": "L:source.markdown",
+  "patterns": [
+    {
+      "begin": "(```\\s*hazel)",
+      "end": "```",
+      "name": "markup.raw.code.block.hazel",
+      "contentName": "source.hazel",
+      "patterns": [
+        { "include": "source.hazel" }
+      ]
+    }
+  ]
+}

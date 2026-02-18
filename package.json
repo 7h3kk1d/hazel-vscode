@@ -20,20 +20,43 @@
                 "language": "hazel",
                 "scopeName": "source.hazel",
                 "path": "./syntaxes/hazel.tmLanguage.json"
+            },
+            {
+                "scopeName": "markdown.ocaml.injection",
+                "path": "./syntaxes/markdown-injection.tmLanguage.json",
+                "injectTo": [
+                    "source.reason"
+                ]
+            },
+            {
+                "scopeName": "source.hazel.markdown",
+                "path": "./syntaxes/hazel-in-markdown.tmLanguage.json",
+                "injectTo": [
+                    "source.markdown"
+                ]
             }
         ],
         "languages": [
             {
                 "id": "hazel",
-                "aliases": ["Hazel"],
-                "extensions": [".hz"],
+                "aliases": [
+                    "Hazel"
+                ],
+                "extensions": [
+                    ".hz"
+                ],
                 "configuration": "./language-configuration.json"
-              }
+            }
         ]
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": ""
+    "author": "Alexander Bandukwala",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:7h3kk1d/hazel-vscode.git"
+    }
 }
